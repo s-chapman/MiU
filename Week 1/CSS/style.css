@@ -1,0 +1,99 @@
+/*
+ Style for html
+ Shane Chapman
+ VFW Project 1
+*/
+
+
+
+/* h1 font and alignment settings */
+h1 {
+    text-align: center;
+    border: ridge #000;
+    border-radius: 25px;
+    margin: auto;
+    font-family: MyriadPro;
+    text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, /*i really like this*/
+    0 0 0.2em #87F;
+}
+
+p{
+    text-align: center;
+    font-family: MyriadPro;
+    
+}
+
+label{
+    display: block;
+    font-family: MyriadPro;
+}
+
+a:hover{
+    color: #ff0000;
+}
+
+/*used a generator for this */
+body{
+background: #ebf1f6; /* Old browsers */
+background: -moz-linear-gradient(top, #ebf1f6 0%, #abd3ee 50%, #89c3eb 51%, #d5ebfb 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebf1f6), color-stop(50%,#abd3ee), color-stop(51%,#89c3eb), color-stop(100%,#d5ebfb)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* IE10+ */
+background: linear-gradient(top, #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf1f6', endColorstr='#d5ebfb',GradientType=0 ); /* IE6-9 */
+}
+/*cant get this to work driving me crazy*/
+
+.border {
+    display: block;
+    border: ridge #000;
+    border-radius: 25px;
+    padding: 5px 5px 5px 5px;
+    margin: 10px 10px 10px 10px;
+   
+}
+
+li{
+    list-style-type: none;
+    font-family: fantasy;
+    margin-right: 20;
+    padding-right: 40;  
+}
+ul {
+    list-style-type: none;
+    font-family: fantasy;
+    margin-right: 20;
+    padding-right: 40;     
+}
+select {
+    display: inline;
+}
+
+ #errors li{
+    font-family: MyriadPro;
+}
+
+#add {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#browse{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#search{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.resize {
+    width: 300px;
+    height: auto;
+
+}
