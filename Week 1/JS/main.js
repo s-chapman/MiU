@@ -147,8 +147,8 @@ function getImage(obj, makeSubList){
         makeSubList.appendChild(imageLi);
         var genreImg = document.createElement('img');
         var mediaImg = document.createElement('img');
-        mediaImg.setAttribute("src", "../images/"+ obj.media[1] + ".png");
-        genreImg.setAttribute("src", "../images/"+ obj.genres[1] + ".png");
+        mediaImg.setAttribute("src", "images/"+ obj.media[1] + ".png");
+        genreImg.setAttribute("src", "images/"+ obj.genres[1] + ".png");
         var spaceSpan = document.createElement('span');
         spaceSpan.innerHTML = '&nbsp;';
         imageLi.appendChild(genreImg);
