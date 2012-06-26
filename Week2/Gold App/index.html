@@ -19,7 +19,7 @@
 
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" type="text/css" />
 		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
-		<!--<script src="js/libs/modernizr.custom.min.js"></script>-->
+		<script src="js/libs/modernizr.custom.min.js"></script>
 
 	</head>
 	<body>
@@ -36,15 +36,15 @@
 					Keep track of your movie colection the easy way. Just add your DVD, Bluray, and Digital movies.
 				</p>
 				<p>
-					<a href="#additem" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right">Add your movies</a>
+					<a href="#additem" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="false">Add your movies</a>
 				</p>
 				
 				<p>
-					<a href="#view" id="get" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right">View your movies</a>
+					<a href="#view" id="get" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="false">View your movies</a>
 				</p>
 				
 				<p>
-					<a href="#rss" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right">Movie news</a>
+					<a href="#rss" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="false"	>Movie news</a>
 				</p>
 				
 				<p>
@@ -121,48 +121,8 @@
 			</div>
 
 		</div>
-		<!-- Search field form -->
-		<div data-role="page" id="search" data-add-back-btn="true">
-
-			<div data-role="header">
-				<h1>Search</h1>
-			</div>
-
-			<div data-role="content">
-				<form action="#" method="post" id="searchForm" />
-				<fieldset id="searchFieldset">
-					<legend>
-						Search Local Storage
-					</legend>
-					<ul id=errors></ul>
-					<ul id="questions">
-						<li>
-							<label for="genres">Genres</label>
-							<br />
-							<div id="selectDrop"></div>
-						</li>
-						<li>
-							<label id="mname">Search Term: </label>
-							<input type="text" id="search" />
-						</li>
-					</ul>
-				</fieldset>
-				<input type="button" value="Search" id="searchBtn" />
-				<br />
-			</div>
-
-			<div data-role="footer" data-position="fixed">
-				<div data-role="navbar">
-					<ul>
-						<li>
-							<a href="#home">Home</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-
-		</div>
-
+		
+	
 		<!-- rss news feed -->
 		<div data-role="page" id="rss" data-add-back-btn="true">
 
@@ -233,7 +193,7 @@
 		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 		<script src="js/libs/jquery.zrssfeed.js"></script>
-		<script src="js/movie.main.js"></script>
+		<script src="js/main.js"></script>
 		<script src="js/json.js"></script>
 		<script src="js/libs/jsrender.js"></script>
 
