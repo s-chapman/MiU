@@ -4,22 +4,22 @@ window.addEventListener("DOMContentLoaded", function (){
 
 //show the slider values
 function SetSlider() {
-   var slider = $('mrating');
-   var sliderSpan = $('mratingValue');
+   var slider = ge('mrating');
+   var sliderSpan = ge('mratingValue');
    
    slider.onchange = function() {
         sliderSpan.innerHTML = this.value;
      }
 }
 //getElementByID Function
-function $(x){
+function ge(x){
         var theElement= document.getElementById(x);
         return theElement;
         }
 //create seletct field element
 function makeDrop(id, dropAry, htmlId){
         var formTag = document.getElementsByTagName("form"),
-            selectLi = $(htmlId);
+            selectLi = ge(htmlId);
             makeSelect = document.createElement("select");
             makeSelect.setAttribute("id", id)
         for(var i=0, j=dropAry.length; i<j; i++){
@@ -41,8 +41,8 @@ function makeDrop(id, dropAry, htmlId){
 //        }
 //        }
 function getCheckboxValue(){
-        if($('mfavorite').checked){
-            favoriteValue = $('mfavorite').value;
+        if(ge('mfavorite').checked){
+            favoriteValue = ge('mfavorite').value;
         }else{
             favoriteValue = "no";
         }
@@ -50,18 +50,18 @@ function getCheckboxValue(){
 function ToggleControls(n){
         switch(n){
             case "on":
-               $('form').style.display = "none";
-               $('deleteYourMovie').style.display = 'inline';
-               $('editYourMovie').style.display = "none";
-               $('addNew').style.display = "inline";
+               ge('form').style.display = "none";
+               ge('deleteYourMovie').style.display = 'inline';
+               ge('editYourMovie').style.display = "none";
+               ge('addNew').style.display = "inline";
                 break;
             
             case "off":
-               $('form').style.display = "block";
-               $('deleteYourMovie').style.display = 'inline';
-               $('editYourMovie').style.display = "inline";
-               $('addNew').style.display = "none";
-               $('items').style.display = "none";
+               ge('form').style.display = "block";
+               ge('deleteYourMovie').style.display = 'inline';
+               ge('editYourMovie').style.display = "inline";
+               ge('addNew').style.display = "none";
+               ge('items').style.display = "none";
                 break;
             
             default:
@@ -84,14 +84,14 @@ function storeData(key){
                 getCheckboxValue();
         
         var item = {};
-        item.genres = ["Genre:", $('dropDown').value];
-        item.media = ["Media Type",$('Mdrop').value];
-        item.mname = ["Movie name:", $('mname').value];
-        item.date = ["Movie Date:", $('mdate').value]; 
-        item.note = ["Notes:", $('mnotes').value];
+        item.genres = ["Genre:", ge('dropDown').value];
+        item.media = ["Media Type",ge('Mdrop').value];
+        item.mname = ["Movie name:", ge('mname').value];
+        item.date = ["Movie Date:", ge('mdate').value]; 
+        item.note = ["Notes:", ge('mnotes').value];
         //item.type = ["Media:", mediaValue];
         item.favorite = ["Favorite:",favoriteValue];
-        item.rating = ["Rating:", $('mrating').value];
+        item.rating = ["Rating:", ge('mrating').value];
         //save data into local storage; use stringify to convert our object to a string
         localStorage.setItem(id, JSON.stringify(item));
         alert("Movie Saved!");
@@ -111,7 +111,7 @@ function getData(){
         var makeList = document.createElement('ul');
         makeDiv.appendChild(makeList);
         document.body.appendChild(makeDiv); 
-        $("items").style.display = "block";
+        ge("items").style.display = "block";
         for(var i=0, len=localStorage.length; i<len;i++){
             var makeli = document.createElement('li');
             var linksLi = document.createElement("li");
@@ -201,12 +201,12 @@ function editItem(){
         ToggleControls("off");
         
         //populate the form fields with the current local storage values
-        $('dropDown').value = item.genres[1];
-        $('Mdrop').value = item.media[1];
-        $('mname').value = item.mname[1];
-        $('mdate').value = item.date[1];
-        $('mnotes').value = item.note[1];
-        $('mrating').value = item.rating[1];
+        ge('dropDown').value = item.genres[1];
+        ge('Mdrop').value = item.media[1];
+        ge('mname').value = item.mname[1];
+        ge('mdate').value = item.date[1];
+        ge('mnotes').value = item.note[1];
+        ge('mrating').value = item.rating[1];
         //var radios = document.forms[0].Media;
         //for(var i=0; i<radios.length; i++){
         //        if (radios[i].value == "DVD" && item.type[1] == "DVD"){
@@ -218,10 +218,10 @@ function editItem(){
         //        }
         //}
         if(item.favorite[1] == "Yes"){
-                $('mfavorite').setAttribute("checked", "checked");
+                ge('mfavorite').setAttribute("checked", "checked");
         }
         
-        var editSubmit = $('submit');
+        var editSubmit = ge('submit');
         //remove the initial listener from the input "save movie" button.
         editSubmit.removeEventListener("click", storeData);
         //change submit button value to the edit button
@@ -258,10 +258,10 @@ function Validate(){
        
         
         //define the elements we want to check
-        var getGroup = $('dropDown');
-        var getMname = $('mname');
-        var getMdate = $('mdate');
-        var getMedia = $('Mdrop');
+        var getGroup = ge('dropDown');
+        var getMname = ge('mname');
+        var getMdate = ge('mdate');
+        var getMedia = ge('Mdrop');
         //reset error messages
         errMsg.innerHTML = "";
         getGroup.style.border = "1px solid black";
@@ -323,19 +323,19 @@ function Validate(){
     var mediaType=["", "DVD", "Bluray", "Digital"];
         var mediaValue = null;
         var favoriteValue = "no";
-        var errMsg = $('errors');
+        var errMsg = ge('errors');
 makeDrop("dropDown", genres, "genres");
 makeDrop("Mdrop", mediaType, "media");
 SetSlider();
 
 //Set Link & Submit click events
-var displayLink = $("editYourMovie");
+var displayLink = ge("editYourMovie");
 displayLink.addEventListener("click", getData);
 
-var clearlink = $("deleteYourMovie");
+var clearlink = ge("deleteYourMovie");
 clearlink.addEventListener("click", clearLocal);
 
-var save = $("submit");
+var save = ge("submit");
 save.addEventListener("click", storeData);
         
 });
