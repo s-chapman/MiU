@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--Shane D. Chapman-->
+<!--VFW Project 1-->
+        
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="user-scalable=no, width-device-width, initial-scale=1.0" />
+        <meta name="viewport" content="target-densitydpi=device-dpi" />
+        <meta name="HandheldFriendly" content=true"/>
+        <meta name="MoblieOptimized" content="320"/>
+        <title>My Movie List</title>
+        <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
+        <script src="../JS/json.js" type="text/javascript"></script>
+        <script src="../JS/main.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>Add Your Movies Here</h1>
+         <form action="#" method="post" id='form'>
+            <fieldset>
+                <legend>Movie Info</legend>
+                <ul id="errors"></ul>
+                <!--start of the table for all my input fields-->
+               <table>
+                <tr>
+                    <!--Genres type drop down-->
+                   <td>
+                    <label for="dropDown">Genres</label>
+                    </td>
+                   <td id="genres"></td>
+                </tr>           
+                       <!-- <select id="typedropdown" name="typedropdown">
+                            <option value='Action'>Action</option>
+                            <option value='Adventure'>Adventure</option>
+                            <option value='Comedy'>Comedy</option>
+                            <option value='ComingofAge'>Coming Of Age</option>
+                            <option value='Crime'>Crime</option>
+                            <option value='ScienceFiction'>Science Fiction</option>
+                            <option value='Horror'>horror</option>
+                            <option value='Drama'>Drama</option>
+                        </select>-->
+                <tr>
+                    <!--radio buttons for media type-->
+                    <td><label for="media">Media Type:</label></td><td id="media">
+                    <!--<input type="radio" name="Media" value="DVD" id="Media1">DVD
+                    <input type="radio" name="Media" value="BluRay" id="Media1">BluRay
+                    <input type="radio" name="Media" value="Digital" id="Media1">Digital-->
+                    </td>
+                </tr>
+                <tr>
+                    <!--text fileds for movie name and date-->
+                    <td><label for="mname">Movie Name:</label></td><td><input type="text" id="mname" placeholder="Movie Name"/></td>
+                </tr>
+                <tr>
+                    <td><label for="mdate">Movie Date:</label></td><td><input type="date" id="mdate" placeholder="Movie Date"/></td>
+                </tr>
+                <tr>
+                    <!--favorite checkbox-->
+                    <td><label for="mfavorite">Favorite:</label></td><td><input type="checkbox" name="Favorite" id="mfavorite" value="Yes"/></td>
+                </tr>
+                <tr>
+                    <!--radting slider-->
+                    <td><label for="mrating">Rating:</label></td><td><input id= "mrating" type="range" Min="0" Max="10" name="Rating"/>
+                    <span id="mratingValue">5</span>
+                    </td>
+                </tr>
+                <tr>
+                    <!--text area-->
+                    <td><label for="mnotes">Notes:</label></td><td><textarea cols="20" rows="5" wrap="hard" name="mnotes" id="mnotes"></textarea></td>
+                </tr>
+                </table>
+            </fieldset>
+            <input type="button" Value="Add Your Movie" id="submit"/>
+        </form>
+         <a href="#" id="editYourMovie">View your movies</a>&nbsp;<a href="#" id="deleteYourMovie">Delete your movies</a>
+         <a href="additem.html" id="addNew" style="display:none;">Add New Movie</a>
+    </body>
+</html>
+

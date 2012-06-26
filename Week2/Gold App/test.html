@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8">
+
+		<title>My Movie List</title>
+
+		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+
+		<!-- StyleSheets under here -->
+		<link href="./CSS/style.css" rel="stylesheet" type="text/css" />
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" type="text/css" />
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+		<script src="js/libs/modernizr.custom.min.js"></script>
+
+	</head>
+	<body>
+		<!-- home page-->
+		<div data-role="page" id="home">
+
+			<div data-role="header">
+				<h1>My Movie List</h1>
+			<div data-role="content">
+				<p><h1>Add your movies here!</h1></p>
+			</div>
+
+			<div>
+				<form id='test'>
+
+					<legend>
+						Movie Info
+					</legend>
+					
+			</div>
+
+			<div id="genres"></div>
+
+			<!--radio buttons for media type-->
+			<div><label for="media">Media Type:</label></div>
+			<div id="media"></div>
+
+			<!--text fileds for movie name and date-->
+			<div><label for="mname">Movie Name:</label></div>
+			<div><input type="text" id="mname" placeholder="Movie Name" name="a" value=""/></div>
+
+			<div><label for="mdate">Movie Date:</label></div>
+			<div><input type="date" id="mdate" placeholder="Movie Date" value=""/></div>
+
+			<!--favorite checkbox-->
+			<div><label for="mfavorite">Favorite:</label></div>
+			<div><input type="checkbox" name="Favorite" id="mfavorite" value="Yes"/></div>
+
+			<!--radting slider-->
+			<div><label for="mrating">Rating:</label></div>
+			<div>
+				<input id= "mrating" type="range" Min="0" Max="10" name="Rating"/>
+				<span id="mratingValue">5</span>
+                        </div>
+			<!--text area-->
+			<div><label for="mnotes">Notes:</label></div>
+			<div><textarea cols="20" rows="5" wrap="hard" name="mnotes" id="mnotes"></textarea></div>
+			<input type="button" Value="Add Your Movie" id="submit"/>
+			</form>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="#home">Home</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+
+
+
+		<!-- JavaScript under here -->
+		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		<script src="js/libs/jquery.zrssfeed.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/json.js"></script>
+                <script type="text/javascript">
+                    $('#submit').click(function () {
+                console.log($('form').serialize());
+                    });
+                
+                </script>
+	</body>
+</html>

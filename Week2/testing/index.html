@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8">
+
+		<title>My Movie List</title>
+
+		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+
+		<!-- StyleSheets under here -->
+		<link href="./CSS/style.css" rel="stylesheet" type="text/css" />
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" type="text/css" />
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+		<script src="js/libs/modernizr.custom.min.js"></script>
+
+	</head>
+	<body>
+		<!-- home page-->
+		<div data-role="page" id="home">
+
+			<div data-role="header">
+				<h1>My Movie List</h1>
+			</div>
+
+			<div data-role="content">
+				<img src="./images/movie.png">
+				<p>
+					Keep track of your movie colection the easy way. Just add your DVD, Bluray, and Digital movies.
+				</p>
+				<p>
+					<a href="additem.html" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right">Add your movies</a>
+				</p>
+				
+				<p>
+					<a href="view.html" id="get" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right">View your movies</a>
+				</p>
+				<p>
+					<a href="rss.html" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right">Movie news</a>
+				</p>
+				<p>
+					<div data-role="collapsible" class="accordionCorrection">
+						<h3>Browse Your Movies</h3><ul id="genreList"></ul>
+					</div>
+				</p>
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		<script src="js/libs/jquery.zrssfeed.js"></script>
+		<script src="js/movie.main.js"></script>
+		<script src="js/json.js"></script>
+		<script src="js/libs/jsrender.js"></script>
+        </body>
+</html>
