@@ -1,7 +1,6 @@
 /*
  Style for html
  Shane Chapman
- VFW Project 1
 */
 
 
@@ -43,7 +42,7 @@ background: -ms-linear-gradient(top, #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 
 background: linear-gradient(top, #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf1f6', endColorstr='#d5ebfb',GradientType=0 ); /* IE6-9 */
 }
-/*cant get this to work driving me crazy*/
+
 
 .border {
     display: block;
@@ -75,20 +74,20 @@ select {
 }
 
 #add {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 109.5px;
+    margin-right: 109.5px;
     display: block;
 }
 
 #browse{
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 133px;
+    margin-right: 133px;
     display: block;
 }
 
 #search{
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 97.5px;
+    margin-right: 97.5px;
     display: block;
 }
 
