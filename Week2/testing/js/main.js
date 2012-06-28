@@ -98,19 +98,19 @@ function getData(){
             autoFillData();
             getData();
         } else {
-        //ToggleControls("on");
-        //Write Data from local storage to the browser.
-        //var makeDiv = document.createElement('div');
-        //makeDiv.setAttribute("id", "items");
-        //var makeList = document.createElement('ul');
-       // makeDiv.appendChild(makeList);
-        //document.body.appendChild(makeDiv); add
-        //ge("items").style.display = "block";
+        ToggleControls("on");
+        Write Data from local storage to the browser.
+        var makeDiv = document.createElement('div');
+        makeDiv.setAttribute("id", "items");
+        var makeList = document.createElement('ul');
+        makeDiv.appendChild(makeList);
+        document.body.appendChild(makeDiv); add
+        ge("items").style.display = "block";
         for(var i=0, len=localStorage.length; i<len;i++){
-            //var makeli = document.createElement('li');
-            //var linksLi = document.createElement("li");
-            //makeli.setAttribute("class", "border");
-            //makeList.appendChild(makeli);
+            var makeli = document.createElement('li');
+            var linksLi = document.createElement("li");
+            makeli.setAttribute("class", "border");
+            makeList.appendChild(makeli);
             var key = localStorage.key(i);
             var value = localStorage.getItem(key);
             //convert the string from local storage value back to an abject by using JSON.parse
@@ -375,5 +375,70 @@ $('#rssFeed').rssfeed(//'http://i.rottentomatoes.com/syndication/rss/upcoming.xm
 
 
 
+function getSearch() {
+var category = ge("groups").value;
+var term = ge("search").value;
+
+//By Category Only
+if (category !== "--Choose A Catagory--" && term === "") {
+for (var i = 0, j = localStorage.length; i < j; i++) {
+var key = localStorage.key(i);
+var vals = localStorage.getItem(key);
+var items = JSON.parse(vals);
+
+if (category === items.group[1]) {
+for (var n in items) {
+console.log(items[n][1]);
 
 
+
+}
+
+
+}
+
+}
+}
+
+
+//By term
+if (term !== "" && category === "--Choose A Catagory--") {
+for (i = 0, j = localStorage.length; i < j; i++) {
+var key = localStorage.key(i);
+var vals = localStorage.getItem(key);
+var items = JSON.parse(vals);
+var sublist = document.createElement("li")
+for (n in items) {
+if (items[n][1].indexOf(term) != -1) {
+for (var q in itemz) {
+console.log(items[q][1]);
+//console.log()
+
+
+}
+}
+}
+}
+
+}
+
+//By category and term
+if (term !== "" && category !== "--Choose A Catagory--") {
+for (i = 0, j = localStorage.length; i < j; i++) {
+var key = localStorage.key(i);
+var vals = localStorage.getItem(key);
+var itemz = JSON.parse(vals);
+for (n in items) {
+if (items[n][1].indexOf(term) != -1) {
+for (q in items) {
+console.log(itemz[q][1]);
+}
+}
+}
+}
+
+}
+
+
+var search = ge("searchButton");
+search.addEventListener("click", getSearch);
