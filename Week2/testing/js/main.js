@@ -18,6 +18,7 @@ function ge(x){
         var theElement= document.getElementById(x);
         return theElement;
         }
+        
 //create seletct field element
 function makeDrop(id, dropAry, htmlId){
         var formTag = document.getElementsByTagName("form"),
@@ -31,7 +32,7 @@ function makeDrop(id, dropAry, htmlId){
             makeOption.innerHTML = optText;
             makeSelect.appendChild(makeOption);
         }        
-        //selectLi.appendChild(makeSelect);
+       selectLi.appendChild(makeSelect);
     }
 
 function getCheckboxValue(){
@@ -99,7 +100,7 @@ function getData(){
             getData();
         } else {
         ToggleControls("on");
-        Write Data from local storage to the browser.
+        //Write Data from local storage to the browser.
         var makeDiv = document.createElement('div');
         makeDiv.setAttribute("id", "items");
         var makeList = document.createElement('ul');
@@ -345,7 +346,7 @@ makeDrop("Mdrop", mediaType, "media");
 makeDrop("searchDrop", genres, "selectDrop");
 SetSlider();
 $('select').selectmenu();
-populateBrowseAccordion(genres, "#genreList");
+
 $('#genreList').listview();
 var category = ge('genres').value;
 //var term = ge("search").value;
@@ -359,19 +360,10 @@ var clearlink = ge("deleteYourMovie");
 var save = ge("submit");
 //save.addEventListener("click", storeData);
 
-$('ul[data-role^="listview"] > li').each(function() {
-    
-    this.addEventListener("click", function(){
-        $('#headertxt').html($(this).find("a"));
-                  });
-    
-});
 
-$('#rssFeed').rssfeed(//'http://i.rottentomatoes.com/syndication/rss/upcoming.xml'
-                      'http://rss.imdb.com/news/sb/', {
-					limit:15
-				});
-});
+//rss feed
+$('#rssFeed').rssfeed('http://rss.imdb.com/news/sb/', {limit:15});
+
 
 
 
