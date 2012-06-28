@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8">
+
+		<title>My Movie List</title>
+
+		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+
+		<!-- StyleSheets under here -->
+		<link href="./CSS/style.css" rel="stylesheet" type="text/css" />
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" type="text/css" />
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+		<script src="js/libs/modernizr.custom.min.js"></script>
+
+	</head>
+        <body>
+            <div data-role="page" id="additem" data-add-back-btn="true">
+
+			<div data-role="header">
+				<h1>Add Your Movies</h1>
+			</div>
+
+			<div data-role="fieldcontain">
+				<form>
+				<label for="genres" class="select">Genres:</label>
+				<select name="genres" id="genres">
+					<option value="action">Action</option>
+					<option	value="adventure">Adventure</option>
+					<option	value="comedy">Comedy</option>
+					<option value="comingOfAge">Coming Of Age</option>
+					<option value="crime">Crime</option>
+					<option value="fantasy">Fantasy</option>
+					<option value="horror">Horror</option>
+					<option value="romance">Romance</option>
+					<option value="scienceFiction">Science Fiction</option>
+					<option value="thriller">Thriller</option>
+				</select>
+			
+				<label for="media" class="select">Media Type:</label>
+				<select name="media" id="media">
+					<option value="bluray">BluRay</option>
+					<option value="dvd">DVD</option>
+					<option value="digital">Digital</option>
+				</select>
+				
+				<label for="mname">Movie Name:</label><input type="text" id="mname" placeholder="Movie Name" name="mname">
+				
+				<label for="mdata">Movie Date:</label><input type="date" id="mdate" placeholder="Movie Date" name="mdate">
+				
+				<label for="mfavorite">Favorite:</label><input type="checkbox" id="mfavorite" value="Yes" name="mfavorite">
+				
+				<label for="mrating">Movie Rating:</label><input type="range" min=0 max=10 name="mrating" id="mrating">
+				
+				<label for="mnotes">Notes:</label><textarea cols="20" rows="5" name="mnotes" id="mnotes"></textarea>
+				
+				<input type="button" Value="Add Your Movie" id="submit"/>
+				
+				</form>
+			
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="index.html" data-ajax="false">Home</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+            <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	    <script src="js/libs/jquery.zrssfeed.js"></script>
+	    <script src="js/movie.main.js"></script>
+	    <script src="js/json.js"></script>
+	    <script src="js/libs/jsrender.js"></script>
+        </body>
