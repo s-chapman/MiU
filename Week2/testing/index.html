@@ -9,7 +9,8 @@
 		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
 
 		<!-- Mobile IE needs ClearType for smoothing fonts -->
 		<meta http-equiv="cleartype" content="on">
@@ -35,15 +36,21 @@
 				<p>
 					Keep track of your movie colection the easy way. Just add your DVD, Bluray, and Digital movies.
 				</p>
+				
 				<p>
-					<a href="additem.html" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="false">Add your movies</a>
+					<label for="basicSearch">Search for a Movie</label>
+					<input type="search" name="search" id="basicSearch" value="" />
+					<a href="search.html"  data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="true">Search Movies</a>
+				</p>
+				<p>
+					<a href="additem.html" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="true">Add your movies</a>
 				</p>
 				
 				<p>
-					<a href="view.html" id="get" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="false">View your movies</a>
+					<a href="view.html" id="get" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="true">View your movies</a>
 				</p>
 				<p>
-					<a href="rss.html" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="false">Movie news</a>
+					<a href="rss.html" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="true">Movie news</a>
 				</p>
 				<p>
 					<a href="browse.html" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="false">Browse your Movies</a>
@@ -54,7 +61,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li>
-							<a href="index.html">Home</a>
+							<a href="index.html" data-transition="flow">Home</a>
 						</li>
 					</ul>
 				</div>
@@ -62,7 +69,8 @@
 		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 		<script src="js/libs/jquery.zrssfeed.js"></script>
-		<script src="js/movie.main.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/functionLib.js"></script>
 		<script src="js/json.js"></script>
 		<script src="js/libs/jsrender.js"></script>
         </body>
