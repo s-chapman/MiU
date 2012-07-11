@@ -8,3 +8,7 @@ div .accordionCorrection {
 div.ui-header a.ui-link-inherit{
     color: white;
 }
+
+.ui-icon-myapp-search{
+    background-image: url ("./images/inline/search.png");
+}

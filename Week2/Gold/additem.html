@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--Shane D. Chapman-->
+<!--VFW Project 1-->
+        
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="user-scalable=no, width-device-width, initial-scale=1.0" />
+        <meta name="viewport" content="target-densitydpi=device-dpi" />
+        <meta name="HandheldFriendly" content=true"/>
+        <meta name="MoblieOptimized" content="320"/>
+        <title>My Movie List</title>
+        <link href="CSS/style.css" rel="stylesheet" type="text/css" />
+        
+    </head>
+    <body>
+	<div data-role="page">
+        <h1>Add Your Movies Here</h1>
+         <form action="#" method="post" id='form'>
+        <div>
+                <legend>Movie Info</legend>
+                <ul id="errors"></ul>
+                <!--start of the table for all my input fields-->
+               
+                    <!--Genres type drop down-->
+                  
+			<div><label for="dropDown">Genres</label></div>
+                   
+                  <div id="genres"></div>
+           
+                    <div><label for="media">Media Type:</label></div>
+		    <div id="media"></div>
+                    
+               
+                    <!--text fileds for movie name and date-->
+                   <div><label for="mname">Movie Name:</label></div><div><input type="text" id="mname" placeholder="Movie Name"/></div>
+                
+                    <div><label for="mdate">Movie Date:</label></div><div><input type="date" id="mdate" placeholder="Movie Date"/></div>
+                
+                    <!--favorite checkbox-->
+                    <div><label for="mfavorite">Favorite:</label></div><div><input type="checkbox" name="Favorite" id="mfavorite" value="Yes"/></div>
+                
+                    <!--radting slider-->
+                    <div><label for="mrating">Rating:</label></div><div><input id= "mrating" type="range" Min="0" Max="10" name="Rating"/>
+                    
+                    </div>
+                
+                    <!--text area-->
+                    <div><label for="mnotes">Notes:</label></div><div><textarea cols="20" rows="5" wrap="hard" name="mnotes" id="mnotes"></textarea></div>
+                
+		<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="index.html" data-transition="flow" data-ajax="true" >Home</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+        
+        </div>
+            <input type="button" Value="Add Your Movie" id="submit"/>
+        </form>
+         <a href="view.html" id="editYourMovie">View your movies</a>&nbsp;<a href="#" id="deleteYourMovie">Delete your movies</a>
+         <a href="additem.html" id="addNew" style="display:none;">Add New Movie</a>
+         <!-- scripts here -->
+	 <script src="js/functionLib.js"></script>
+	<script src="js/additem.js"></script>
+	
+	</div>
+    </body>
+</html>
+
