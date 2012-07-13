@@ -1,7 +1,7 @@
 
 var movies = [{
     "id" : ["ID:", "1"],
-    "genres": ["Genres:", "Science Fiction"],
+    "genres": ["Genres:", "ScienceFiction"],
     "media": ["Media Type:", "BluRay"],
     "mname": ["Movie Name:", "Tron Legacy"],
     "date": ["Movie Date:", "17 December 2010"],
@@ -11,7 +11,7 @@ var movies = [{
 },
  {
      "id": ["ID:", "2"],
-     "genres": ["Genres:", "Science Fiction"],
+     "genres": ["Genres:", "ScienceFiction"],
      "media": ["Media Type:", "DVD"],
      "mname": ["Movie Name:", "Tron"],
      "date": ["Movie Date:", "9 July 1982"],
@@ -71,7 +71,7 @@ var movies = [{
 },
 {
     "id": ["ID:", "8"],
-    "genres": ["Genres:", "Science Fiction"],
+    "genres": ["Genres:", "ScienceFiction"],
     "media": ["Media Type:", "DVD"],
     "mname": ["Movie Name:", "Kyuti Hani"],
     "date": ["Movie Date:", "24 May 2004"],
@@ -151,7 +151,7 @@ var movies = [{
 },
 {
     "id": ["ID:", "16"],
-    "genres": ["Genres:", "Science Fiction"],
+    "genres": ["Genres:", "ScienceFiction"],
     "media": ["Media Type:", "DVD"],
     "mname": ["Movie Name:", "2001: A Space Odyssey"],
     "date": ["Movie Date:", "6 April 1968"],
