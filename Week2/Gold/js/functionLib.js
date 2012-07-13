@@ -9,25 +9,6 @@ function initRss (){
 }
 
 function getSearch(term) {
- //   var category = ge("groups").value;
-    //var term = ge("search").value;
-
-    ////By Category Only
-    //if (category !== "--Choose A Catagory--" && term === "") {
-    //    for (var i = 0, j = localStorage.length; i < j; i++) {
-    //        var key = localStorage.key(i);
-    //        var vals = localStorage.getItem(key);
-    //        var items = JSON.parse(vals);
-    //
-    //        if (category === items.group[1]) {
-    //            for (var n in items) {
-    //                console.log(items[n][1]);
-    //            }
-    //        }
-    //    }
-    //}
-
-
     //By term
     if (term !== ""){
         for (i = 0, j = localStorage.length; i < j; i++) {
@@ -39,7 +20,9 @@ function getSearch(term) {
             var vals = localStorage.getItem(key);
             var items = JSON.parse(vals);
                 if (items["mname"][1].indexOf(term) != -1) {
+                    
                     var resultsUl = $("#searchResults");
+                    getImage(items, resultsUl[0]);
                     for (var q in items) {
                         
                         $("<li>").html(items[q][0] + items[q][1]).appendTo(resultsUl);
@@ -48,23 +31,31 @@ function getSearch(term) {
             }
         }
     }
+}
 
-    ////By category and term
-    //if (term !== "" && category !== "--Choose A Catagory--") {
-    //    for (i = 0, j = localStorage.length; i < j; i++) {
-    //        var key = localStorage.key(i);
-    //        var vals = localStorage.getItem(key);
-    //        var itemz = JSON.parse(vals);
-    //        for (n in items) {
-    //            if (items[n][1].indexOf(term) != -1) {
-    //                for (q in items) {
-    //                    console.log(items[q][1]);
-    //                }
-    //            }
-    //        }
-    //    }
-    //}
-
+function getMovieByCategory(cat, paragraph)
+{
+        if (cat !== ""){
+        for (var i = 0, j = localStorage.length; i < j; i++) {
+            var key = localStorage.key(i);
+            if (key.substring(0,3) != "sml")
+            {
+                continue;
+            }
+            var vals = localStorage.getItem(key);
+            var items = JSON.parse(vals);
+            
+                if (items["genres"][1].indexOf(cat) != -1) {
+                    getImage(items, paragraph[0]);
+                    for (var q in items) {
+                        $("<li>").html(items[q][0] + items[q][1]).appendTo(paragraph);
+                        
+                    }
+                
+            }
+        }
+    }
+    return false;
 }
 
 //show the slider values
@@ -125,7 +116,7 @@ function ToggleControls(n){
                ge('addNew').style.display = "none";
                ge('items').style.display = "none";
                 break;
-            
+                
             default:
                 return false;
         }
@@ -199,7 +190,7 @@ function getData(){
                 var makeSubList = document.createElement('ul');
                 //makeSubList.innerHTML = obj.genres[1]; Not needed
                 makeli.appendChild(makeSubList);
-                  //     getImage(obj, makeSubList); 
+                getImage(obj, makeSubList); 
                 for(var n in obj){
                     var makeSubli = document.createElement('li');
                     makeSubList.appendChild(makeSubli);
@@ -228,8 +219,8 @@ function getImage(obj, makeSubList){
         makeSubList.appendChild(imageLi);
         var genreImg = document.createElement('img');
         var mediaImg = document.createElement('img');
-        mediaImg.setAttribute("src", "../images/"+ obj.media[1] + ".png");
-        genreImg.setAttribute("src", "../images/"+ obj.genres[1] + ".png");
+        mediaImg.setAttribute("src", "IMAGES/"+ obj.media[1] + ".png");
+        genreImg.setAttribute("src", "IMAGES/"+ obj.genres[1] + ".png");
         var spaceSpan = document.createElement('span');
         spaceSpan.innerHTML = '&nbsp;';
         imageLi.appendChild(genreImg);
@@ -311,6 +302,8 @@ function deleteItem(){
              localStorage.removeItem(this.key);
       
              alert("Movie was deleted!!");
+             window.location = "index.html";
+             return false;
         }else{
                 alert("Movie was not deleted.")
         }
