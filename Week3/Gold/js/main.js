@@ -1,17 +1,19 @@
+var parseAdditemForm = function(data){
+        console.log(data);
+    };
 
-//Wait until the DOM is ready.
-window.addEventListener("DOMContentLoaded", function (){
 
 
+$(document).ready(function(){
+    var adForm = $('#form');
+
+    adForm.validate({
+        invalidHandler: function(form, validator){},
+        submitHandler: function(){
+            var data = rbform.serializeArray
+            parseAdditemForm(data)
+        }
         
-});
-
-//var search = ge("searchButton");
-//search.addEventListener("click", getSearch);
-
-//rss feed
-//ge('#rssFeed').rssfeed('http://rss.imdb.com/news/sb/', {limit:15});
-
-
-
-
+        });                 
+    
+    });

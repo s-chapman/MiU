@@ -10,7 +10,7 @@
         <meta name="HandheldFriendly" content=true"/>
         <meta name="MoblieOptimized" content="320"/>
         <title>My Movie List</title>
-        <link href="CSS/style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" type="text/css" />
         
     </head>
     <body>
@@ -20,33 +20,53 @@
         <div>
                 <legend>Movie Info</legend>
                 <ul id="errors"></ul>
-                <!--start of the table for all my input fields-->
+                <!--start of the form for all my input fields-->
                
                     <!--Genres type drop down-->
                   
-			<div><label for="dropDown">Genres</label></div>
-                   
-                  <div id="genres"></div>
+		    <div data-role="fieldcontain">
+			<label for="dropDown">Genres</label>
+			<div id="genres" class="required"></div>
+		    </div>
+		 
            
-                    <div><label for="media">Media Type:</label></div>
-		    <div id="media"></div>
-                    
-               
+                    <div data-role="fieldcontain" >
+			<label for="media">Media Type:</label>
+			<div id="media" class="required"></div>
+		    </div>
+		    
                     <!--text fileds for movie name and date-->
-                   <div><label for="mname">Movie Name:</label></div><div><input type="text" id="mname" placeholder="Movie Name"/></div>
+                    <div data-role="fieldcontain">
+			<label for="mname">Movie Name:</label>
+			<input type="text" id="mname" class="required"  placeholder="Movie Name"/>
+		    </div>
                 
-                    <div><label for="mdate">Movie Date:</label></div><div><input type="date" id="mdate" placeholder="Movie Date"/></div>
+		    <div data-role="fieldcontain">
+			<label for="mdate">Movie Date:</label>
+			<input type="date" id="mdate" class="required" placeholder="M/D/Y"/>
+		    </div>
                 
                     <!--favorite checkbox-->
-                    <div><label for="mfavorite">Favorite:</label></div><div><input type="checkbox" name="Favorite" id="mfavorite" value="Yes"/></div>
+                    <div data-role="fieldcontain">
+			<label for="mfavorite">Favorite:</label>
+			<input type="checkbox" name="Favorite" id="mfavorite" value="Yes"/>
+		    </div>
                 
                     <!--radting slider-->
-                    <div><label for="mrating">Rating:</label></div><div><input id= "mrating" type="range" Min="0" Max="10" name="Rating"/>
-                    
-                    </div>
+                    <div data-role="fieldcontain">
+			<label for="mrating">Rating:</label>
+			<input id= "mrating" type="range" value="5" Min="0" Max="10" name="Rating"/>
+		    </div>
                 
                     <!--text area-->
-                    <div><label for="mnotes">Notes:</label></div><div><textarea cols="20" rows="5" wrap="hard" name="mnotes" id="mnotes"></textarea></div>
+                    <div data-role="fieldcontain">
+			<label for="mnotes">Notes:</label>
+			<textarea cols="20" rows="5" wrap="hard" name="mnotes" id="mnotes"></textarea>
+		    </div>
+		    
+		    <div data-role="fieldcontain">
+			<input type="submit" Value="Add Your Movie" id="submit"/>
+		    </div>
                 
 		<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
@@ -59,12 +79,14 @@
 			</div>
         
         </div>
-            <input type="button" Value="Add Your Movie" id="submit"/>
+            
         </form>
          <a href="view.html" id="editYourMovie">View your movies</a>&nbsp;<a href="#" id="deleteYourMovie">Delete your movies</a>
          <a href="additem.html" id="addNew" style="display:none;">Add New Movie</a>
          <!-- scripts here -->
-	 <script src="js/functionLib.js"></script>
+	<script src="js/libs/jquery.validate.js"></script>
+	<script src="js/functionLib.js"></script>
+	<script src="js/main.js"></script>
 	<script src="js/additem.js"></script>
 	
 	</div>

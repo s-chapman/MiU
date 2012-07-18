@@ -13,6 +13,8 @@
     var clearlink = ge("deleteYourMovie");
     //clearlink.addEventListener("click", clearLocal);
     
+    
+    
     $(clearlink).click(function() {
         clearLocal();
     })

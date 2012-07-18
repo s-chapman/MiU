@@ -1,5 +1,5 @@
 //global vars
-$_Genres = ["","Action", "Adventure", "Comedy", "Coming of Age", "Crime", "ScienceFiction", "Horror", "Drama"];
+$_Genres = ["","Action", "Adventure", "Comedy", "Coming of Age", "Crime", "ScienceFiction", "Horror", "Drama", ];
 $_MediaTypes = ["", "DVD", "Bluray", "Digital"];
 
 
