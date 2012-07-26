@@ -10,7 +10,9 @@
         <meta name="HandheldFriendly" content=true"/>
         <meta name="MoblieOptimized" content="320"/>
         <title>My Movie List</title>
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" /> 
+
         
     </head>
     <body>
@@ -23,16 +25,29 @@
                 <!--start of the form for all my input fields-->
                
                     <!--Genres type drop down-->
-                  
 		    <div data-role="fieldcontain">
-			<label for="dropDown">Genres</label>
-			<div id="genres" class="required"></div>
+		    <label for="genres" class="select">Genres:</label>
+			<select name="genres" id="genres" class="required">
+				<option value="action">Action</option>
+				<option	value="adventure">Adventure</option>
+				<option	value="comedy">Comedy</option>
+				<option value="comingOfAge">Coming Of Age</option>
+				<option value="crime">Crime</option>
+				<option value="fantasy">Fantasy</option>
+				<option value="horror">Horror</option>
+				<option value="romance">Romance</option>
+				<option value="scienceFiction">Science Fiction</option>
+				<option value="thriller">Thriller</option>
+			</select>
 		    </div>
-		 
-           
-                    <div data-role="fieldcontain" >
-			<label for="media">Media Type:</label>
-			<div id="media" class="required"></div>
+			
+		    <div data-role="fieldcontain">
+		    <label for="media" class="select">Media Type:</label>
+			<select name="media" id="media" class="required" >
+				<option value="bluray">BluRay</option>
+				<option value="dvd">DVD</option>
+				<option value="digital">Digital</option>
+			</select>
 		    </div>
 		    
                     <!--text fileds for movie name and date-->
@@ -42,7 +57,10 @@
 		    </div>
                 
 		    <div data-role="fieldcontain">
-			<label for="mdate">Movie Date:</label>
+			<!--<label for="mydate">Movie Data</label>
+			<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "calbox"}'>--> <!-- did not work at all not going to waste my time teach code not plugins-->
+
+			<label for="mdate">Movie Date:</label>-->
 			<input type="date" id="mdate" class="required" placeholder="M/D/Y"/>
 		    </div>
                 
@@ -84,6 +102,12 @@
          <a href="view.html" id="editYourMovie">View your movies</a>&nbsp;<a href="#" id="deleteYourMovie">Delete your movies</a>
          <a href="additem.html" id="addNew" style="display:none;">Add New Movie</a>
          <!-- scripts here -->
+	<script type="text/javascript" scr="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" scr="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+	<script type="js/libs/jquery.mobile.datebox-1.0.1.js"></script>
+	
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
 	<script src="js/libs/jquery.validate.js"></script>
 	<script src="js/functionLib.js"></script>
 	<script src="js/main.js"></script>

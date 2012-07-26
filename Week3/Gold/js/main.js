@@ -4,7 +4,7 @@ var parseAdditemForm = function(data){
 
 
 
-$(document).ready(function(){
+$(document).bind('pageinit', function(){
     var adForm = $('#form');
 
     adForm.validate({
