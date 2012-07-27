@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8">
+
+		<title>My Movie List</title>
+
+		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+
+		<!-- StyleSheets under here -->
+		<link href="./CSS/style.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="themes/shane-theme.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css" />
+		
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" type="text/css" />
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+		<script src="js/libs/modernizr.custom.min.js"></script>
+
+	</head>
+	<body>
+		<!-- home page-->
+		<div data-role="page" data-theme="A" id="home">
+
+			<div data-role="header">
+				<h1>My Movie List</h1>
+			</div>
+
+			<div data-role="content">
+				<center><img src="./images/logo.png"></center>
+				<p>
+					Keep track of your movie colection the easy way. Just add your DVD, Bluray, and Digital movies.
+				</p>
+				
+				<p>
+					<label for="basicSearch">Search for a Movie</label>
+					<input type="search" name="search" id="basicSearch" value="" />
+					<a href="search.html"  data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="true">Search Movies</a>
+				</p>
+				<p>
+					<a href="additem.html" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="true">Add your movies</a>
+				</p>
+				
+				<p>
+					<a href="view.html" id="get" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="true">View your movies</a>
+				</p>
+				<p>
+					<a href="rss.html" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="true">Movie news</a>
+				</p>
+				<p>
+					<a href="browse.html" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="true">Browse your Movies</a>
+				</p>
+				<p>
+					<a href="layout.html" data-transition="flow" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="true">Movie Pics</a>
+				</p>
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="index.html" data-transition="flow">Home</a>
+						</li>
+						<li>
+							<a href="../bronze/index.html" data-transition="flow" data-ajax="true">Bronze app</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		<script src="js/libs/jquery.validate.js"></script>
+		<script src="js/libs/jquery.zrssfeed.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/functionLib.js"></script>
+		<script src="js/json.js"></script>
+		
+        </body>
+</html>

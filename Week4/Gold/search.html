@@ -15,34 +15,43 @@
 		<meta http-equiv="cleartype" content="on">
 
 		<!-- StyleSheets under here -->
+		<link rel="stylesheet" href="themes/shane-theme.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css" />
 		<link href="./CSS/style.css" rel="stylesheet" type="text/css" />
+
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" type="text/css" />
-		
 		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 		<script src="js/libs/modernizr.custom.min.js"></script>
 
 	</head>
         <body>
-            <div data-role="page" id="rss" data-add-back-btn="true">
+            <div data-role="page" id="view" data-add-back-btn="true">
 
 			<div data-role="header">
-				<h1>Movie News</h1>
+				<h1>Search</h1>
 			</div>
 
-			<div data-role="content">
-
-				<div id="rssFeed"></div>
+			<div data-role="content" id="viewContent">
+			    <h1>Search for: <span id="searchTerm"></span></h1>
+                            <p>
+                                <ul id="searchResults">
+                                    
+                                </ul>
+                            </p>
 			</div>
 
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
 						<li>
-							<a href="index.html" data-transition="flow" data-ajax="true" >Home</a>
+							<a href="index.html" data-transition="flow" data-ajax="true">Home</a>
 						</li>
 					</ul>
 				</div>
 			</div>
-		<script src="js/rss.js"></script>
-		</div> 
+		  <script src="js/search.js" class="disposableScript"></script>
+		
+		</div>
+
         </body>
+</html>
