@@ -1,7 +1,15 @@
 /* write your CSS in here*/
 body{
     background-image:url('../images/film-strip1.png');
+    background-size: 325px 1029px;
+    background-repeat: no-repeat;
 }
+
+p{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
 
 body{
     margin-left: 150px;
